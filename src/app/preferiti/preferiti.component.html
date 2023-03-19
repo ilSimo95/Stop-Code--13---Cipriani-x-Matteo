@@ -1,0 +1,6 @@
+<div class="card" *ngFor="let preferito of preferitiService.preferiti">
+    <p class="card-body">
+        {{preferito.title}}
+        <button type="button" class="btn-close" aria-label="Close" (click)="preferitiService.removePreferito(preferito)"></button>
+    </p>
+</div>
