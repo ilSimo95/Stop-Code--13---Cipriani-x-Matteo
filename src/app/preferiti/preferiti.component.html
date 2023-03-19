@@ -1,6 +1,10 @@
-<div class="card" *ngFor="let preferito of preferitiService.preferiti">
-    <p class="card-body">
+<div class="card" style="width: 20rem;">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item" *ngFor="let preferito of preferitiService.preferiti">
         {{preferito.title}}
-        <button type="button" class="btn-close" aria-label="Close" (click)="preferitiService.removePreferito(preferito)"></button>
-    </p>
+        <button type="button" class="btn-close position-absolute end-0 px-3" aria-label="Close" (click)="preferitiService.removePreferito(preferito)"></button>
+    </li>
+  </ul>
 </div>
+
+<button type="button" class="btn btn-danger my-2" (click)="preferitiService.removeAll()">Svuota</button>

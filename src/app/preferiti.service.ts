@@ -24,4 +24,8 @@ export class PreferitiService {
     }
   }
 
+  removeAll():void {
+    this.preferiti = [];
+  }
+
 }
